@@ -1,0 +1,30 @@
+
+server:
+  port: 80
+  servlet:
+    context-path: /coolfrog
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/coolfrog
+    username: coolfrog
+    password: coolfrog123456
+    type: com.alibaba.druid.pool.DruidDataSource
+#  sql:
+#    init:
+#      mode: always
+#      continue-on-error: true
+#      schema-locations:
+#        - "classpath:db/coolfrog_table.sql"
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+
+frog:
+  wx:
+    appId: wx401e32aa2171b493
+    appSecret: e5b65f96b94d1a24bcdecf1163c4976d
