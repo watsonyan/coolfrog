@@ -26,5 +26,5 @@ mybatis-plus:
 
 frog:
   wx:
-    appId: wx401e32aa2171b493
-    appSecret: e5b65f96b94d1a24bcdecf1163c4976d
+    appId: 
+    appSecret: 
