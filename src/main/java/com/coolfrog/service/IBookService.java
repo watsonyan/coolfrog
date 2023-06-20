@@ -2,6 +2,7 @@ package com.coolfrog.service;
 
 import com.coolfrog.domain.Book;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.github.pagehelper.PageInfo;
 
 /**
  * <p>
@@ -12,5 +13,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @since 2023-02-24
  */
 public interface IBookService extends IService<Book> {
-
+    PageInfo<Book> getPageBooks(int pageNum, int pageSize);
 }

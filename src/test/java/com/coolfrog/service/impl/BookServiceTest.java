@@ -1,6 +1,8 @@
-package com.coolfrog.service;
+package com.coolfrog.service.impl;
 
 import com.coolfrog.domain.Book;
+import com.coolfrog.service.IBookService;
+import com.github.pagehelper.PageInfo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -41,5 +43,14 @@ class BookServiceTest {
         books.forEach(book -> {
             System.out.println(book.toString());
         });
+    }
+
+    @Test
+    void getPageBooks() {
+        PageInfo<Book> pageBooks = bookService.getPageBooks(1, 1);
+//        books.forEach(book -> {
+//            System.out.println(book.toString());
+//        });
+        System.out.println(pageBooks.getList());
     }
 }

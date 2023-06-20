@@ -18,6 +18,17 @@ CREATE TABLE `tbl_user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='用户表';
 
+DROP TABLE IF EXISTS `tbl_admin`;
+CREATE TABLE `tbl_admin` (
+    `id` bigint(20) NOT NULL AUTO_INCREMENT,
+    `nickname` varchar(32) binary CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '用户昵称',
+    `password` varchar(32) NOT NULL COMMENT '加密后的密码',
+    `last_login_time` datetime NOT NULL DEFAULT NOW() COMMENT '上次登录时间',
+    `create_time` datetime NOT NULL DEFAULT NOW() COMMENT '创建时间',
+    `last_update_time` datetime NOT NULL DEFAULT NOW() COMMENT '上次更新时间',
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='后台管理员表';
+
 # DROP TABLE IF EXISTS `tbl_oauth`;
 # CREATE TABLE `tbl_oauth` (
 #     `id` bigint(20) NOT NULL,
@@ -55,6 +66,7 @@ DROP TABLE IF EXISTS `tbl_sentence`;
 CREATE TABLE `tbl_sentence` (
     `id` bigint(20) NOT NULL AUTO_INCREMENT,
     `lesson_id` bigint(20) NOT NULL DEFAULT 0 COMMENT '所属课文id',
+    `seq_id` tinyint NOT NULL DEFAULT 0,
     `content` varchar(32) NOT NULL COMMENT '文本内容',
     `image` varchar(256) NOT NULL COMMENT '图片',
     `audio` varchar(256) NOT NULL COMMENT '音频',

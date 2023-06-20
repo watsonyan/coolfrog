@@ -8,7 +8,7 @@ import lombok.Setter;
 
 /**
  * <p>
- * 课文表
+ * 课文单词、句子表
  * </p>
  *
  * @author watson
@@ -16,33 +16,40 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@TableName("tbl_lesson")
-public class Lesson extends BaseDomain {
+@TableName("tbl_sentence")
+public class Sentence extends BaseDomain {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 书本id
+     * 所属课文id
      */
-    private Long bookId;
+    private Long lessonId;
+
+    private Byte seqId;
 
     /**
-     * 标题
+     * 文本内容
      */
-    private String title;
+    private String content;
 
     /**
-     * 课文主要单词ids
+     * 图片
      */
-    private String wordIds;
+    private String image;
 
     /**
-     * 课文句子ids
+     * 音频
      */
-    private String sentenceIds;
+    private String audio;
+
+    /**
+     * 是否为单词
+     */
+    private Byte isWord;
 
     /**
      * 状态，0：禁用，1：启用
      */
-    private Integer status;
+    private Byte status;
 }

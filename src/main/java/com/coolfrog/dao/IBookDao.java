@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author watson
- * @since 2023-02-24
+ * @since 2023-06-20
  */
 @Mapper
 public interface IBookDao extends BaseMapper<Book> {

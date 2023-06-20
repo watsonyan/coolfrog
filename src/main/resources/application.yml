@@ -7,7 +7,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/coolfrog
+    url: jdbc:mysql://localhost:3306/coolfrog?serverTimeZone=UTC
     username: coolfrog
     password: coolfrog123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -24,7 +24,12 @@ mybatis-plus:
       table-prefix: tbl_
       id-type: auto
 
+
 frog:
   wx:
     appId: 
-    appSecret: 
+    appSecret:
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true

@@ -1,16 +1,16 @@
 package com.coolfrog.service;
 
-import com.coolfrog.domain.Lesson;
+import com.coolfrog.domain.Sentence;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- * 课文表 服务类
+ * 课文单词、句子表 服务类
  * </p>
  *
  * @author watson
  * @since 2023-06-20
  */
-public interface ILessonService extends IService<Lesson> {
+public interface ISentenceService extends IService<Sentence> {
 
 }

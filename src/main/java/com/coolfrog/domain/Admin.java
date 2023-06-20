@@ -3,12 +3,13 @@ package com.coolfrog.domain;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.coolfrog.domain.BaseDomain;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
  * <p>
- * 用户登录授权表
+ * 后台管理员表
  * </p>
  *
  * @author watson
@@ -16,18 +17,23 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@TableName("tbl_oauth")
-public class Oauth extends BaseDomain {
+@TableName("tbl_admin")
+public class Admin extends BaseDomain {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户id
+     * 用户昵称
      */
-    private Long uid;
+    private String nickname;
 
     /**
-     * openid
+     * 加密后的密码
      */
-    private String openid;
+    private String password;
+
+    /**
+     * 上次登录时间
+     */
+    private LocalDateTime lastLoginTime;
 }
