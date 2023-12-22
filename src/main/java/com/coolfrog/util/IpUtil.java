@@ -1,9 +1,10 @@
 package com.coolfrog.util;
 
+import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import javax.servlet.http.HttpServletRequest;
+
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 

@@ -12,7 +12,7 @@ import lombok.Setter;
  * </p>
  *
  * @author watson
- * @since 2023-06-20
+ * @since 2023-12-22
  */
 @Getter
 @Setter
@@ -32,17 +32,17 @@ public class Lesson extends BaseDomain {
     private String title;
 
     /**
-     * 课文主要单词ids
-     */
-    private String wordIds;
-
-    /**
-     * 课文句子ids
-     */
-    private String sentenceIds;
-
-    /**
      * 状态，0：禁用，1：启用
      */
     private Integer status;
+
+    /**
+     * 文本内容
+     */
+    private String content;
+
+    /**
+     * 音频
+     */
+    private String audio;
 }

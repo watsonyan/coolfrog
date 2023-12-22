@@ -8,11 +8,11 @@ import lombok.Setter;
 
 /**
  * <p>
- * 课文单词、句子表
+ * 课文句子表
  * </p>
  *
  * @author watson
- * @since 2023-06-20
+ * @since 2023-12-22
  */
 @Getter
 @Setter
@@ -42,14 +42,4 @@ public class Sentence extends BaseDomain {
      * 音频
      */
     private String audio;
-
-    /**
-     * 是否为单词
-     */
-    private Byte isWord;
-
-    /**
-     * 状态，0：禁用，1：启用
-     */
-    private Byte status;
 }

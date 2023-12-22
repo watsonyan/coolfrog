@@ -10,12 +10,12 @@ import java.util.Collections;
 
 public class AutoGenerator {
     public static void main(String[] args) {
-        FastAutoGenerator.create("jdbc:mysql://localhost:3306/coolfrog", "coolfrog", "coolfrog123456")
+        FastAutoGenerator.create("jdbc:mysql://localhost:3306/coolfrog", "coolfrog", "coolfrog")
                 .globalConfig(builder -> {
                     builder.author("watson") // 设置作者
 //                            .enableSwagger() // 开启 swagger 模式
 //                            .fileOverride() // 覆盖已生成文件
-                            .outputDir("E://Watson/git/coolfrog/src/main/java"); // 指定输出目录
+                            .outputDir("E://projects/web/coolfrog/src/main/java"); // 指定输出目录
                 })
                 .packageConfig(builder -> {
                     builder.parent("com.coolfrog")
@@ -49,7 +49,8 @@ public class AutoGenerator {
                             // mapper
                             .mapperBuilder()
                             .superClass(BaseMapper.class)
-                            .enableMapperAnnotation()
+
+//                            .enableMapperAnnotation()
                             .formatMapperFileName("I%sDao")
                             .enableFileOverride()
                             .formatXmlFileName("%s");

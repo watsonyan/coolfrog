@@ -2,7 +2,6 @@ package com.coolfrog.dao;
 
 import com.coolfrog.domain.Book;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -10,9 +9,8 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author watson
- * @since 2023-06-20
+ * @since 2023-12-22
  */
-@Mapper
 public interface IBookDao extends BaseMapper<Book> {
 
 }
